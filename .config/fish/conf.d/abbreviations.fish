@@ -1,4 +1,4 @@
-if test [$(which eza)]
+if command -q eza
     abbr -a ll eza -l --icons
     abbr -a ls eza -g --icons
     abbr -a la eza -g -a --icons
