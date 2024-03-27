@@ -8,3 +8,7 @@ end
 if command -q zoxide
     abbr -a cd z
 end
+
+if command -q bat
+    abbr -a cat bat
+end
