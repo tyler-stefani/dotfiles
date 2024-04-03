@@ -1,0 +1,183 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = 'catppuccin_frappe'
+
+format = """
+[](teal)\
+$os\
+$username\
+[](fg:teal bg:sapphire)\
+$directory\
+[](fg:sapphire bg:lavender)\
+$git_branch\
+$git_status\
+[](fg:lavender bg:mauve)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:mauve bg:surface2)\
+$docker_context\
+$conda\
+[](fg:surface2 bg:surface1)\
+$time\
+[ ](fg:surface1)\
+$line_break$character"""
+
+[palettes.catppuccin_frappe]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
+
+[os]
+disabled = false
+style = "bg:teal fg:base"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:teal fg:base"
+style_root = "bg:teal fg:base"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:base bg:sapphire"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:lavender"
+format = '[[ $symbol $branch ](fg:base bg:lavender)]($style)'
+
+[git_status]
+style = "bg:lavender"
+format = '[[($all_status$ahead_behind )](fg:base bg:lavender)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[c]
+symbol = " "
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[golang]
+symbol = "󰟓"
+style = "bg:mauve"
+format = '[[ $symbol( $mod_version) ](fg:base bg:mauve)]($style)'
+
+[php]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[java]
+symbol = " "
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:)mauve]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[python]
+symbol = ""
+style = "bg:mauve"
+format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:surface2"
+format = '[[ $symbol( $context) ](fg:text bg:surface2)]($style)'
+
+[conda]
+style = "bg:surface2"
+format = '[[ $symbol( $environment) ](fg:text bg:surface2)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:surface1"
+format = '[[  $time ](fg:text bg:surface1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:green)'
+error_symbol = '[](bold fg:red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
