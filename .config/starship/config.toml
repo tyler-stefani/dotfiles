@@ -2,6 +2,8 @@
 
 palette = 'catppuccin_frappe'
 
+command_timeout = 1000
+
 format = """
 [](teal)\
 $os\
@@ -128,7 +130,7 @@ format = '[[ $symbol( $version) ](fg:base bg:mauve)]($style)'
 [golang]
 symbol = "󰟓"
 style = "bg:mauve"
-format = '[[ $symbol( $mod_version) ](fg:base bg:mauve)]($style)'
+format = '[[ $symbol( $version)( $mod_version) ](fg:base bg:mauve)]($style)'
 
 [php]
 symbol = ""
